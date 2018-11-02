@@ -961,9 +961,13 @@ void loop()
   
     readMagData(magCount);  // Read the x/y/z adc values
     getMres();
-    magbias[0] = +470.;  // User environmental x-axis correction in milliGauss, should be automatically calculated
-    magbias[1] = +120.;  // User environmental x-axis correction in milliGauss
-    magbias[2] = +125.;  // User environmental x-axis correction in milliGauss
+    magbias[0] = +7.;  // User environmental x-axis correction in milliGauss, should be automatically calculated
+    magbias[1] = +45.;  // User environmental y-axis correction in milliGauss
+    magbias[2] = -279.5;  // User environmental z-axis correction in milliGauss
+    // Original values for reference
+    // magbias[0] = +470.;  // User environmental x-axis correction in milliGauss, should be automatically calculated
+    // magbias[1] = +120.;  // User environmental y-axis correction in milliGauss
+    // magbias[2] = +125.;  // User environmental z-axis correction in milliGauss
     
     // Calculate the magnetometer values in milliGauss
     // Include factory calibration per data sheet and user environmental corrections
